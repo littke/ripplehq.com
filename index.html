@@ -44,6 +44,20 @@
         </span>
     </div>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script>
+    $(document).ready(function (){
+        /* Swap images on hover. Couldn't been done with CSS but this is prefered
+        since there are <img> elements. Using divs with background or multiple elements
+        would've been kinda unsemantical. */
+
+        $('#content').hover(function() {
+            $(this).find('h1 img').attr('src', 'images/logo_hover.png');
+            $(this).find('span img').attr('src', 'images/tagline_hover.png');
+        }, function () {
+            $(this).find('h1 img').attr('src', 'images/logo.png');
+            $(this).find('span img').attr('src', 'images/tagline.png');
+        });
+    });
 </script>
 </html>
