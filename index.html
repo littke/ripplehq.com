@@ -5,16 +5,31 @@
     <link rel="stylesheet" type="text/css" href="css/animate-custom.css" media="screen, projection" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen, projection" />
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
         body {
             background: url('images/bg.png') repeat;
             text-align: center;
+            font-family: "Lucida Grande", Verdana, sans-serif;
+            font-size: 11px;
+            color: #999;
+        }
+        #floater {
+            float: left;
+            height: 40%;
+            margin-bottom: -220px;
+            position: relative;
+            width: 1px;
         }
         #content {
+            clear: left;
             margin: 0 auto;
             text-align: left;
             position: relative;
-            margin-top: 400px;
-            width: 175px;
+            width: 244px;
             padding: 40px;
         }
         h1 { 
@@ -26,15 +41,19 @@
         #content:hover h1 {
             color: #f57f01;
         }
+        p {
+            margin-top: 30px;
+        }
         span {
             font: 11px/1.2 "AdelleBasicBoldItalic" Georgia, sans-serif;
             position: absolute;
             bottom: 40px;
-            left: 180px;
+            left: 220px;
         }
     </style>
 </head>
 <body>
+    <div id="floater"></div>
     <div id="content">
         <h1 class="bounceInLeft animated">
             <img src="images/logo.png" alt="Stronghold Studios"/>
@@ -43,6 +62,7 @@
             <img src="images/tagline.png" alt="By Littke & Littke"/>
         </span>
     </div>
+    <p>Stronghold Studios AB, Eriksbergsgatan 10b, 114 30 Stockholm. hi@strongholdstudios.se.</p>
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script>
