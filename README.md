@@ -1,1 +1,1 @@
-Official homepage for Stronghold Studios AB.
+Official homepage for Ripple AB.

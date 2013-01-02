@@ -2,22 +2,11 @@
 <html>
 <head>
     <title>Ripple</title>
-    <link rel="stylesheet" type="text/css" href="css/animate-custom.css" media="screen, projection" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen, projection" />
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <meta name="description" value="Webbyrå i Stockholm, grundad av Jonatan Littke och Carl Littke.">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style type="text/css" media="screen, projection" rel="stylesheet">
-        @font-face {
-            font-family: 'LeagueGothic';
-            src: url('fonts/League_Gothic-webfont.eot');
-            src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
-                 url('fonts/League_Gothic-webfont.woff') format('woff'),
-                 url('fonts/League_Gothic-webfont.ttf') format('truetype'),
-                 url('fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
-            font-weight: normal;
-            font-style: normal;
-        }
-
         html, body {
             height: 100%;
             margin: 0;
@@ -27,8 +16,8 @@
         body {
             background: url('images/bg.png') repeat;
             text-align: center;
-            font-family: "Lucida Grande", Verdana, sans-serif;
-            font-size: 11px;
+            font-family: 'Lato', "Lucida Grande", Verdana, sans-serif;
+            font-size: 13px;
             color: #999;
         }
         #floater {
@@ -43,26 +32,39 @@
             margin: 0 auto;
             text-align: left;
             position: relative;
-            width: 90px;
+            width: 352px;
             padding: 40px;
         }
         h1 { 
-            font: 48px/0.9 "LeagueGothic", Georgia, sans-serif;
-            text-transform: uppercase;
-            color: #acbbc7;
             margin: 0;
         }
-        #content:hover h1 {
-            color: #f57f01;
-        }
         p {
-            margin-top: 40px;
+            margin-top: 20px;
+            text-align: justify;
         }
         span {
             position: relative;
             display: block;
             left: -45px;
             top: 10px;
+        }
+
+        a, a:visited {
+            text-decoration: none;
+            color: #f37f20;
+        }
+
+        #footer {
+            text-align: center;
+            font-style: italic;
+        }
+
+        #twitter {
+            margin-left: 117px;
+            margin-top: 50px;
+        }
+        #twitter a {
+            display: none;
         }
     </style>
     <script type="text/javascript">
@@ -82,26 +84,22 @@
 <body>
     <div id="floater"></div>
     <div id="content">
-        <h1 class="bounceInLeft animated">
-            Ripple
+        <h1>
+            <img src="images/logo.png"/ alt="Ripple">
         </h1>
-        <span class="bounceInRight animated">
-            <img src="images/tagline.png" alt="By Littke & Littke"/>
-        </span>
+        <p>Interface design agency from Stockholm, Sweden, founded by brothers Carl and <a href="http://littke.com" target="_blank">Jonatan Littke</a>.</p>
+
+        <p>We specialize in UI design and web development. Together we've worked for top Swedish brands such as <a href="http://www.spotify.com" target="_blank">Spotify</a>, 
+        <a href="http://www.izettle.com" target="_blank">iZettle</a> and <a href="http://www.wrapp.com" target="_blank">Wrapp</a>.</p>
+
+        <p>We're interested in building long-term relationships with interesting partners. If that's you and you want our help, let us know at hi@ripplehq.com.</p>
+        
+        <div id="twitter">
+            <a href="https://twitter.com/ripplehq" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ripplehq</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+
+        <p id="footer">Ripple AB, Tegnérgatan 15, Stockholm. hi@ripplehq.com.</p>
     </div>
-    <p>Ripple AB, Tegnérgatan 15, 111 40 Stockholm. hi@ripplehq.com.</p>
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script>
-    $(document).ready(function (){
-        /* Since the tagline is an image (no web font support), use JS to toggle it. */
-        $('#content').hover(function() {
-            $(this).find('h1 img').attr('src', 'images/logo_hover.png');
-            $(this).find('span img').attr('src', 'images/tagline_hover.png');
-        }, function () {
-            $(this).find('h1 img').attr('src', 'images/logo.png');
-            $(this).find('span img').attr('src', 'images/tagline.png');
-        });
-    });
-</script>
 </html>
